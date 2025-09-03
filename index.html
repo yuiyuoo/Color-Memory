@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Memory Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #gameBoard {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            grid-template-rows: repeat(2, 150px);
+            gap: 2em;
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: 0.2s;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        #green {
+            background: #28a745;
+        }
+
+        #red {
+            background: #dc3545;
+        }
+
+        #yellow {
+            background: #ffc107;
+        }
+
+        #blue {
+            background: #007bff;
+        }
+
+        .active {
+            opacity: 1 !important;
+            box-shadow: 0 0 20px white;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #startBtn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color Memory Game</h1>
+    <div id="gameBoard">
+        <div class="btn" id="green">1</div>
+        <div class="btn" id="red">2</div>
+        <div class="btn" id="yellow">3</div>
+        <div class="btn" id="blue">4</div>
+    </div>
+    <div id="status">Press Enter or Start Button</div>
+    <button id="startBtn">Start</button>
+
+</body>
+
+</html>
