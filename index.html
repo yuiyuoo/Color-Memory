@@ -44,9 +44,18 @@
             padding: 10px;
         }
 
+        .number {
+            visibility: hidden;
+        }
+
+        .number.keyboard-active {
+            visibility: visible;
+        }
+
         .btn:active {
             transform: scale(0.95);
         }
+
 
         #green {
             background: #28a745;
@@ -84,19 +93,32 @@
             border-radius: 8px;
             cursor: pointer;
         }
+
+        #keyboardBtn {
+            margin: 1em auto;
+            border-radius: 30px;
+        }
+
+        #keyboardBtn:hover {
+            color: #fff;
+            background-color: #1A1A1A;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
 <body>
     <h1>Color Memory Game</h1>
     <div id="gameBoard">
-        <div class="btn" id="green">1</div>
-        <div class="btn" id="red">2</div>
-        <div class="btn" id="yellow">3</div>
-        <div class="btn" id="blue">4</div>
+        <div class="btn" id="green"><span class="number">1</span></div>
+        <div class="btn" id="red"><span class="number">2</span></div>
+        <div class="btn" id="yellow"><span class="number">3</span></div>
+        <div class="btn" id="blue"><span class="number">4</span></div>
     </div>
     <div id="status">Press Enter or Start Button</div>
     <button id="startBtn">Start</button>
+    <button id="keyboardBtn">Play with Keyboard</button>
 
     <script src="logic.js"></script>
 </body>
